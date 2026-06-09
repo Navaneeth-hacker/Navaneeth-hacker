@@ -1,248 +1,191 @@
+<!-- HERO SECTION (SpaceX/Tesla Control Grid & Radar Animation) -->
 <div align="center">
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=050810&height=3"/>
+  <img src="./images/hero_radar.svg" width="100%" alt="Navaneeth Chandran Hero Control Grid" />
 </div>
 
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!--   NAVANEETH CHANDRAN  ·  HACKTURA R&D  ·  GITHUB PROFILE       -->
-<!-- ════════════════════════════════════════════════════════════════ -->
+<br />
 
+<!-- TERMINAL BOOTSTRAP SYSTEM -->
 <div align="center">
-<br>
-
-```
-╔══════════════════════════════════════════════════════════════════════╗
-║                                                                      ║
-║   > NAVANEETH CHANDRAN                                               ║
-║                                                                      ║
-║   Cybersecurity Researcher  ·  Hardware Innovator  ·  Founder        ║
-║   Kerala, India  ·  Hacktura R&D                                     ║
-║                                                                      ║
-╚══════════════════════════════════════════════════════════════════════╝
-```
-
-[![Cybersecurity](https://img.shields.io/badge/Cybersecurity-Research-00ff85?style=flat-square&labelColor=050810&color=00ff85)](https://github.com/Navaneeth-hacker)
-[![Reverse Engineering](https://img.shields.io/badge/Reverse-Engineering-6366f1?style=flat-square&labelColor=050810)](https://github.com/Navaneeth-hacker)
-[![Embedded Systems](https://img.shields.io/badge/Embedded-Systems-6366f1?style=flat-square&labelColor=050810)](https://github.com/Navaneeth-hacker)
-[![EV Technology](https://img.shields.io/badge/EV-Technology-6366f1?style=flat-square&labelColor=050810)](https://github.com/Navaneeth-hacker)
-[![IoT Research](https://img.shields.io/badge/IoT-Research-334155?style=flat-square&labelColor=050810&color=8892a4)](https://github.com/Navaneeth-hacker)
-[![Hardware Prototyping](https://img.shields.io/badge/Hardware-Prototyping-334155?style=flat-square&labelColor=050810&color=8892a4)](https://github.com/Navaneeth-hacker)
-
-<br>
-
-🟢 &nbsp;`Currently building Sonic Wave EMS` &nbsp;·&nbsp; `Kerala, India` &nbsp;·&nbsp; `Open to research collaborations`
-
+  <img src="./images/terminal.svg" width="100%" alt="System Console Loading Sequence" />
 </div>
 
 ---
 
-## `$ whoami`
+## ⚡ Mission Control
 
-I'm a cybersecurity researcher and hardware engineer working at the intersection of **embedded systems**, **wireless security**, and **energy technology**.
+<div align="center">
 
-At 18, I founded **Hacktura R&D** — a research initiative built around security tooling, hardware innovation, and practical technical education.
+| Status | Engine Layer | Current Mission | Target Output |
+| :---: | :--- | :--- | :--- |
+| 🟢 `ONLINE` | **Cybersecurity Lab** | Firmware Audits & Wireless Assessment | offensive-sec-hardening |
+| 🟢 `STABLE` | **Embedded Energy** | Sonic Wave Dual-Battery ABSS Firmware | ev-range-maximization |
+| 🟡 `TESTBED` | **Hardware Lab** | Portable Pentest Platform (Flipper-Style) | modular-rfid-subsystems |
+| 🔵 `RESEARCH` | **AI Security** | Threat Intel Automation & ML Poisoning | automated-triage-engines |
 
-My flagship project, **Sonic Wave**, is an intelligent dual-battery energy management system for electric vehicles — a research-grade prototype with real commercial ambitions.
+</div>
 
-> ```
-> I don't just learn tools. I build them.
-> My work spans custom security hardware, autonomous wireless assessment
-> platforms, and an intelligent EV battery management system.
-> ```
-
----
-
-## `$ cat hacktura_rd.txt`
-
-**Hacktura R&D** is an independent research and development initiative I founded to pursue work at the edges of cybersecurity and hardware engineering — and to make that knowledge accessible to the next generation.
-
-```
-Focus  →  Wireless security research & tooling
-       →  Portable hardware security platforms
-       →  Embedded systems & IoT security
-       →  Cybersecurity education for youth
-```
+> **"Sharing knowledge and securing the evolving digital future of the younger generation through deep technical innovation, hardware prototyping, and hands-on offensive security research."**
+> — *Navaneeth Chandran, Founder & CEO at Hacktura R&D*
 
 ---
 
-## `$ cat projects/sonic_wave.arch`
+## 🛡️ Executive Profile: `whoami`
 
+<img align="right" width="360" src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif"/>
+
+```python
+class NavaneethChandran:
+    name        = "Navaneeth Chandran"
+    role        = "Founder & CEO @ Hacktura R&D"
+    location    = "Kerala, India 🇮🇳"
+    age         = 18
+
+    stack = [
+        "Python", "C++", "JavaScript", "Kali Linux",
+        "ESP32", "Arduino", "SQL", "Git"
+    ]
+
+    domains = [
+        "Cybersecurity Research",
+        "Reverse Engineering",
+        "Embedded Systems Security",
+        "Hardware Prototyping",
+        "EV Energy Management"
+    ]
+
+    focus_areas = {
+        "active": "Intelligent Dual-Battery Power Selection Systems",
+        "learning": [
+            "Malware Analysis (Static & Dynamic)",
+            "AI Security / Threat Intelligence Automation",
+            "Advanced Wireless Exploitation & SDR"
+        ]
+    }
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                                                                     │
-│   SONIC WAVE  /  EcoPulse                                           │
-│   Intelligent Dual-Battery EMS for Electric Vehicles                │
-│                                                                     │
-│   ┌───────────────┐              ┌────────────────────────────────┐ │
-│   │  Battery  A   │─────────────▶│      ESP32  Control  Core      │ │
-│   │  (Primary)    │              │                                │ │
-│   └───────────────┘              │  · SOC / SOH Real-Time Monitor │ │
-│                                  │  · Predictive Health Analysis  │ │
-│   ┌───────────────┐              │  · Automated Battery Switching │ │
-│   │  Battery  B   │─────────────▶│  · Power Optimization Engine   │ │
-│   │  (Secondary)  │              │  · Voltage / Current / Temp    │ │
-│   └───────────────┘              └────────────────────────────────┘ │
-│                                                                     │
-│   ABSS  →  Automated Battery Selection System                       │
-│                                                                     │
-│   Phase  →  Research & Prototype Development                        │
-│                                                                     │
-│   Roadmap:  AI Optimization  →  Cloud Monitoring  →  Fleet         │
-│             Analytics  →  Smart Grid  →  Commercial Deployment      │
-│                                                                     │
-└─────────────────────────────────────────────────────────────────────┘
-```
 
-**What it solves:** EV battery degradation is one of the primary cost drivers in electric mobility. Sonic Wave implements an intelligent switching architecture that dynamically manages dual-battery configurations — reducing stress on individual cells, extending lifespan, and improving energy utilization.
-
-| Component | Role |
-|:---|:---|
-| ESP32 Control Core | Real-time telemetry, switching logic, power optimization |
-| ABSS | Automated Battery Selection System with predictive health |
-| Monitoring Layer | SOC, SOH, voltage, current, temperature — live |
-| Future AI Layer | Adaptive optimization, cloud fleet management |
+<br clear="right"/>
 
 ---
 
-## `$ ls projects/`
+## 🔮 Flagship Project: Sonic Wave (EcoPulse)
 
-### 🔴 &nbsp; Red-WiFi
-**Autonomous Multi-Band Wireless Security Assessment Platform**
+### *Intelligent Dual-Battery Energy Management System for Electric Vehicles*
 
-```
-Type        →  Security Research Tool
-Capability  →  Wireless recon · Automated assessment · Real-time monitoring
-Stack       →  Python · Linux · Wireless Networking · Security Automation
-```
+**Sonic Wave** is an advanced, automated energy routing and battery management system designed for light EVs. By leveraging an **Automated Battery Selection System (ABSS)** controlled via an ESP32 microcontroller, it intelligently monitors, switches, and optimizes power delivery between dual battery packs in real-time.
 
----
+<div align="center">
+  <img src="./images/sonic_wave_arch.svg" width="100%" alt="Sonic Wave ABSS Architecture Diagram" />
+</div>
 
-### ⬛ &nbsp; Flipper Zero–Inspired Security Hardware
-**Portable Embedded Security Research Platform**
+### Core Technologies & Innovations
+* **Automated Battery Selection System (ABSS)**: Embedded microsecond switching circuits that prevent current surges and drop-outs during transition.
+* **Dual Routing Telemetry**: Direct monitoring of Voltage, Current, Temperature, State of Charge (SOC), and State of Health (SOH).
+* **Predictive Maintenance**: Edge processing algorithm identifying thermal irregularities and cell resistance degradation prior to pack failure.
 
-```
-Philosophy  →  If the tool doesn't exist, build it.
-Type        →  Custom hardware security device (built from scratch)
-Stack       →  Embedded Electronics · Microcontrollers · IoT · Hardware Prototyping
-```
+> [!NOTE]
+> **Future Milestones**: Integrating AI optimization engines to run predictive routing algorithms based on terrain topology and driving history.
 
 ---
 
-### 📡 &nbsp; ESP32 + NEO-6M IoT Research Platform
-**GPS-Integrated Embedded Systems Experimentation**
+## 🌐 The Hacktura Ecosystem
 
-```
-Type        →  IoT Research Platform
-Stack       →  ESP32 · C++ · NEO-6M GPS · Embedded Firmware · IoT Protocols
-```
+Navaneeth is the founder of **Hacktura R&D**, an independent cybersecurity research and hardware innovation lab based in Kerala. Through Hacktura, he designs physical pen-testing equipment, audits firmware ecosystems, and delivers cybersecurity education to prepare the next generation of engineers for emerging digital threats.
 
----
+<div align="center">
+  <img src="./images/hacktura_ecosystem.svg" width="100%" alt="Hacktura R&D Innovation Map" />
+</div>
 
-## `$ cat domains.json`
+### Parallel Research & Portfolios
 
-```json
-{
-  "cybersecurity": [
-    "Penetration Testing",  "Vulnerability Research",
-    "Reverse Engineering",  "Malware Analysis",
-    "Digital Forensics",    "Wireless Security"
-  ],
-  "hardware": [
-    "ESP32",                "Embedded Systems",
-    "IoT Development",      "Sensor Systems",
-    "Hardware Prototyping", "Custom Security Platforms"
-  ],
-  "software": [
-    "Python",   "C++",   "Java",
-    "JavaScript", "Linux", "SQL"
-  ],
-  "research": [
-    "AI in Cybersecurity",  "Embedded Security",
-    "EV Technologies",      "Battery Management Systems"
-  ]
-}
-```
+* **🛜 Red-WiFi**: Autonomous multi-band wireless reconnaissance and auditing platform designed to audit 802.11 environments, isolate network anomalies, and automate intrusion vectors.
+* **🔐 Modular Pentesting Hardware**: Flipper Zero-inspired pocket security tool engineered from the ground up utilizing custom RF and RFID expansion modules.
+* **📡 ESP32 + NEO-6M GPS IoT Tracker**: Embedded geolocation array focused on low-power sensor integration, raw NMEA sentence parsing, and satellite telemetry relays.
 
 ---
 
-## `$ cat achievements.log`
+## 🧱 Technical Arsenal & Dashboard
 
-```
-[◆] 2× YIP District Level Winner
-    Young Innovators Program — recognized at district level
-    for hardware innovation and technical problem-solving
+<div align="center">
 
-[◆] YIP State Level Winner
-    Competed and placed at Kerala state level — the statewide
-    innovation championship for young engineers
+### Cyber Warfare & Hardware Matrix
 
-[◆] Founder — Hacktura R&D
-    Built an independent R&D initiative from the ground up at 18,
-    focused on security tooling and hardware innovation
+| Section | Domain Tools & Languages |
+| :---: | :--- |
+| **Languages** | `Python` · `C++` · `JavaScript` · `Java` · `HTML5` · `SQL` · `Bash` |
+| **Security Labs** | `Kali Linux` · `Wireshark` · `Burp Suite` · `Metasploit` · `OWASP` · `SDR` |
+| **Embedded / IoT** | `ESP32` · `Arduino` · `Raspberry Pi` · `ARM Cortex` · `NEO-6M GPS` |
+| **Databases** | `MySQL` · `SQLite` |
 
-[◆] Security Tool & Hardware Creator
-    Red-WiFi · Flipper Zero–inspired hardware · Sonic Wave EMS
-    — multiple research-grade tools built independently
-```
+</div>
 
 ---
 
-## `$ cat roadmap.md`
+## 📈 Innovation Roadmap
 
-```
-┌─────────────────────── ACTIVE RESEARCH TRACK ──────────────────────┐
-│                                                                     │
-│  [▶] Malware Analysis          Static & dynamic RE, sandbox        │
-│  [▶] Active Directory          Enterprise attack paths             │
-│  [▶] Linux Privilege Esc.      Kernel exploits, misconfigs         │
-│  [▶] AI Security               Adversarial ML, LLM threat models   │
-│                                                                     │
-├─────────────────────── HARDWARE RESEARCH TRACK ─────────────────────┤
-│                                                                     │
-│  [▶] SDR & RF Analysis         Software-defined radio              │
-│  [▶] Advanced Wireless         802.11 deep dive, BLE exploitation  │
-│  [▶] Embedded Security         Firmware extraction, JTAG/UART      │
-│  [▶] EV Energy Optimization    AI-driven BMS, fleet analytics      │
-│                                                                     │
-└─────────────────────────────────────────────────────────────────────┘
-```
+The long-term engineering runway for scaling research, product development, and venture expansion.
+
+<div align="center">
+  <img src="./images/roadmap.svg" width="100%" alt="Navaneeth Chandran 4-Year Roadmap" />
+</div>
 
 ---
 
-## `$ cat stats.sh`
+## 📊 Analytics & Telemetry
 
 <div align="center">
 
 <a href="https://github.com/Navaneeth-hacker">
-  <img height="170em" src="https://github-readme-stats.vercel.app/api?username=Navaneeth-hacker&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=050810&title_color=00ff85&icon_color=6366f1&text_color=8892a4&border_radius=6&ring_color=6366f1"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Navaneeth-hacker&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=70a5fd&icon_color=bf91f3&text_color=c9d1d9&border_radius=10"/>
 </a>
-&nbsp;
 <a href="https://github.com/Navaneeth-hacker">
-  <img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Navaneeth-hacker&layout=compact&hide_border=true&bg_color=050810&title_color=00ff85&text_color=8892a4&langs_count=6&border_radius=6"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Navaneeth-hacker&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=70a5fd&text_color=c9d1d9&langs_count=8&border_radius=10"/>
 </a>
+
+</div>
+
+<div align="center">
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=Navaneeth-hacker&theme=tokyonight-duo&hide_border=true&background=0D1117&ring=70A5FD&fire=BF91F3&currStreakLabel=70A5FD&sideLabels=38BDAE&dates=8B949E&currStreakNum=C9D1D9&sideNums=C9D1D9&stroke=0D1117&border_radius=10)](https://streak-stats.demolab.com?user=Navaneeth-hacker)
+
+</div>
+
+<div align="center">
+
+[![Trophies](https://github-profile-trophy.vercel.app/?username=Navaneeth-hacker&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=7&margin-w=4)](https://github.com/Navaneeth-hacker)
 
 </div>
 
 ---
 
-## `$ cat contact.txt`
+## 🏅 Key Milestones
 
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-Navaneeth--hacker-00ff85?style=for-the-badge&logo=github&logoColor=black&labelColor=050810)](https://github.com/Navaneeth-hacker)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-navaneeth--chandran-6366f1?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=050810)](https://www.linkedin.com/in/navaneeth-chandran-4006b8388)
-[![Hacktura R&D](https://img.shields.io/badge/Hacktura_R%26D-hacktura.io-00ff85?style=for-the-badge&logo=googlechrome&logoColor=black&labelColor=050810)](https://hacktura.io)
-
-<br>
-
-```
-// "Build things that matter. Secure the things that exist."
-//  — Navaneeth Chandran  ·  Hacktura R&D
-```
-
-![Profile Views](https://komarev.com/ghpvc/?username=Navaneeth-hacker&color=00ff85&style=flat-square&label=profile+views)
+| Level | Program | Recognition |
+| :---: | :--- | :--- |
+| 🏆 | **Young Innovators Program (YIP) State** | State Level Winner for Hardware & Security Innovation |
+| 🥇 | **Young Innovators Program (YIP) District** | 2× District Level Winner recognized for IoT & Embedded Systems |
+| 🧪 | **Hacktura R&D Launch** | Founded & operationalized security research initiative in Kerala |
+| 🔩 | **Deep Tech Prototype** | Successfully built and field-tested the ABSS Sonic Wave controller |
 
 </div>
 
+---
+
+## 📬 Establish Uplink
+
 <div align="center">
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=6366f1&height=2"/>
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Navaneeth-hacker)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/navaneeth-chandran-4006b8388)
+[![Website](https://img.shields.io/badge/Hacktura_R%26D-70A5FD?style=for-the-badge&logo=googlechrome&logoColor=white)](https://hacktura.io)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:navaneeth@hacktura.io)
+
+</div>
+
+<br />
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&animation=twinkling" width="100%"/>
 </div>
