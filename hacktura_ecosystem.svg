@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 260" width="100%" height="260">
+  <defs>
+    <!-- Dark glassmorphic background -->
+    <linearGradient id="ecosystemBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#070a13" />
+      <stop offset="100%" stop-color="#04060c" />
+    </linearGradient>
+    
+    <!-- Accent gradients -->
+    <radialGradient id="centerNodeGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#bf91f3" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#70a5fd" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#070a13" stop-opacity="0" />
+    </radialGradient>
+    
+    <linearGradient id="nodeBorderCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdae" />
+      <stop offset="100%" stop-color="#70a5fd" />
+    </linearGradient>
+    
+    <linearGradient id="nodeBorderPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bf91f3" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glowCyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glowPurple" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseCenter {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.05); opacity: 1; }
+    }
+    @keyframes pulseLink {
+      to { stroke-dashoffset: -20; }
+    }
+    @keyframes nodeFloating {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+    @keyframes dataPulse {
+      0% { r: 1px; opacity: 0.2; }
+      50% { r: 4px; opacity: 1; }
+      100% { r: 1px; opacity: 0.2; }
+    }
+
+    .ecosystem-container {
+      fill: url(#ecosystemBg);
+      stroke: #1c2438;
+      stroke-width: 1;
+    }
+    .center-radial {
+      transform-origin: 425px 130px;
+      animation: pulseCenter 6s infinite ease-in-out;
+    }
+    .link-line {
+      fill: none;
+      stroke-width: 1.5;
+      stroke-dasharray: 5, 10;
+      animation: pulseLink 1.5s infinite linear;
+    }
+    .link-cyan {
+      stroke: #38bdae;
+    }
+    .link-purple {
+      stroke: #bf91f3;
+    }
+    .node-group {
+      transform-origin: center;
+      animation: nodeFloating 4s infinite ease-in-out;
+    }
+    .node-circle {
+      fill: #0d1322;
+      stroke-width: 2;
+    }
+    .node-text-title {
+      font-family: 'Fira Code', 'Roboto Mono', monospace;
+      font-size: 11px;
+      font-weight: bold;
+      fill: #ffffff;
+    }
+    .node-text-desc {
+      font-family: 'Fira Code', monospace;
+      font-size: 8px;
+      fill: #a0aec0;
+    }
+    .node-beacon {
+      fill: #38bdae;
+      animation: dataPulse 2s infinite ease-in-out;
+    }
+  </style>
+
+  <!-- Canvas Border and Background -->
+  <rect width="850" height="260" class="ecosystem-container" rx="10" />
+
+  <!-- Title -->
+  <text x="25" y="30" font-family="'Fira Code', monospace" font-size="12" fill="#bf91f3" font-weight="bold" opacity="0.8">HACKTURA R&amp;D // INNOVATION ECOSYSTEM</text>
+  <text x="825" y="30" font-family="'Fira Code', monospace" font-size="10" fill="#70a5fd" text-anchor="end" opacity="0.8">MODE: CONNECTED</text>
+
+  <!-- ==================== ECOSYSTEM CENTRAL GLOW ==================== -->
+  <circle cx="425" cy="130" r="110" fill="url(#centerNodeGrad)" class="center-radial" />
+
+  <!-- ==================== LINK LINES ==================== -->
+  <!-- Center to Top-Left -->
+  <path d="M 425,130 L 190,70" class="link-line link-cyan" />
+  <!-- Center to Bottom-Left -->
+  <path d="M 425,130 L 190,190" class="link-line link-cyan" style="animation-delay: -0.4s;" />
+  <!-- Center to Top-Right -->
+  <path d="M 425,130 L 660,70" class="link-line link-purple" style="animation-delay: -0.8s;" />
+  <!-- Center to Bottom-Right -->
+  <path d="M 425,130 L 660,190" class="link-line link-purple" style="animation-delay: -1.2s;" />
+
+  <!-- ==================== CENTRAL NODE ==================== -->
+  <g transform="translate(0, 0)">
+    <circle cx="425" cy="130" r="35" fill="#080c16" stroke="#bf91f3" stroke-width="2.5" filter="url(#glowPurple)" />
+    <!-- Pulse ring -->
+    <circle cx="425" cy="130" r="45" fill="none" stroke="#bf91f3" stroke-width="0.5" opacity="0.5" />
+    <text x="425" y="127" font-family="'Fira Code', monospace" font-size="10" fill="#ffffff" font-weight="bold" text-anchor="middle">HACKTURA</text>
+    <text x="425" y="139" font-family="'Fira Code', monospace" font-size="9" fill="#bf91f3" font-weight="bold" text-anchor="middle">R&amp;D</text>
+  </g>
+
+  <!-- ==================== EDGE NODES ==================== -->
+
+  <!-- Top-Left Node: Cybersecurity Research -->
+  <g class="node-group" style="animation-delay: 0s;">
+    <circle cx="190" cy="70" r="22" class="node-circle" stroke="url(#nodeBorderCyan)" filter="url(#glowCyan)" />
+    <circle cx="190" cy="70" r="3" class="node-beacon" />
+    <text x="155" y="68" class="node-text-title" text-anchor="end">CYBERSECURITY</text>
+    <text x="155" y="80" class="node-text-desc" text-anchor="end">Reverse Eng · Malware Analysis · Offsec</text>
+  </g>
+
+  <!-- Bottom-Left Node: IoT Systems -->
+  <g class="node-group" style="animation-delay: -1s;">
+    <circle cx="190" cy="190" r="22" class="node-circle" stroke="url(#nodeBorderCyan)" filter="url(#glowCyan)" />
+    <circle cx="190" cy="190" r="3" class="node-beacon" style="animation-delay: 0.5s;" />
+    <text x="155" y="188" class="node-text-title" text-anchor="end">IoT SYSTEMS</text>
+    <text x="155" y="200" class="node-text-desc" text-anchor="end">Firmware Sec · Dual-Battery ABSS (Sonic Wave)</text>
+  </g>
+
+  <!-- Top-Right Node: Hardware Development -->
+  <g class="node-group" style="animation-delay: -2s;">
+    <circle cx="660" cy="70" r="22" class="node-circle" stroke="url(#nodeBorderPurple)" filter="url(#glowPurple)" />
+    <circle cx="660" cy="70" r="3" class="node-beacon" style="fill: #bf91f3; animation-delay: 1s;" />
+    <text x="695" y="68" class="node-text-title" text-anchor="start">HARDWARE DEV</text>
+    <text x="695" y="80" class="node-text-desc" text-anchor="start">Flipper Zero-Style Custom Modular Gear</text>
+  </g>
+
+  <!-- Bottom-Right Node: Education & Community -->
+  <g class="node-group" style="animation-delay: -3s;">
+    <circle cx="660" cy="190" r="22" class="node-circle" stroke="url(#nodeBorderPurple)" filter="url(#glowPurple)" />
+    <circle cx="660" cy="190" r="3" class="node-beacon" style="fill: #bf91f3; animation-delay: 1.5s;" />
+    <text x="695" y="188" class="node-text-title" text-anchor="start">DEEP TECH EDUCATION</text>
+    <text x="695" y="200" class="node-text-desc" text-anchor="start">Youth Empowerment · Cyber Labs · Open Source</text>
+  </g>
+
+</svg>

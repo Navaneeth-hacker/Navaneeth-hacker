@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 260" width="100%" height="260">
+  <defs>
+    <!-- Dark glassmorphic background -->
+    <linearGradient id="terminalBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#06090f" stop-opacity="0.98" />
+    </linearGradient>
+    <linearGradient id="borderGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#70a5fd" />
+      <stop offset="50%" stop-color="#38bdae" />
+      <stop offset="100%" stop-color="#bf91f3" />
+    </linearGradient>
+    
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    @keyframes lineFadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes typingText {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    .window-frame {
+      fill: url(#terminalBg);
+      stroke: url(#borderGlow);
+      stroke-width: 1.5;
+    }
+    .win-button {
+      r: 6;
+      stroke-width: 0.5;
+    }
+    .term-text {
+      font-family: 'Fira Code', 'Courier New', Courier, monospace;
+      font-size: 13px;
+      fill: #c9d1d9;
+      opacity: 0;
+      animation: lineFadeIn 0.3s forwards;
+    }
+    .prompt {
+      fill: #38bdae;
+      font-weight: bold;
+    }
+    .cmd {
+      fill: #70a5fd;
+      font-weight: bold;
+    }
+    .success {
+      fill: #38bdae;
+      font-weight: bold;
+    }
+    .info-label {
+      fill: #bf91f3;
+    }
+    .info-val {
+      fill: #ffffff;
+    }
+    .cursor {
+      fill: #38bdae;
+      animation: blink 0.9s infinite;
+    }
+  </style>
+
+  <!-- Terminal Window Shadow & BG -->
+  <rect x="5" y="5" width="840" height="250" rx="8" class="window-frame" />
+  
+  <!-- Window Header Bar -->
+  <path d="M5,35 L845,35" stroke="#1f242c" stroke-width="1" />
+  
+  <!-- Window Controls (Mac Style) -->
+  <circle cx="25" cy="20" class="win-button" fill="#ff5f56" stroke="#e0443e" />
+  <circle cx="45" cy="20" class="win-button" fill="#ffbd2e" stroke="#dea123" />
+  <circle cx="65" cy="20" class="win-button" fill="#27c93f" stroke="#1aab29" />
+  
+  <!-- Tab Name -->
+  <text x="425" y="24" fill="#8b949e" font-family="'Fira Code', monospace" font-size="11" text-anchor="middle">navaneeth@hacktura:~ (ssh)</text>
+  
+  <!-- Terminal Content Lines -->
+  <!-- Line 1: Command prompt initialization -->
+  <g class="term-text" style="animation-delay: 0.2s;">
+    <text x="25" y="65"><tspan class="prompt">navaneeth@hacktura:~$</tspan> <tspan class="cmd">initialize_profile --identity="deep-tech-builder"</tspan></text>
+  </g>
+
+  <!-- Line 2: Loading logs -->
+  <g class="term-text" style="animation-delay: 1.5s;">
+    <text x="25" y="90">[<tspan fill="#70a5fd">⚙</tspan>] Booting Cybersecurity Research Environment...</text>
+  </g>
+  <g class="term-text" style="animation-delay: 2.2s;">
+    <text x="25" y="110">[<tspan fill="#70a5fd">⚙</tspan>] Syncing Embedded IoT &amp; Hardware Protocols...</text>
+  </g>
+  <g class="term-text" style="animation-delay: 2.8s;">
+    <text x="25" y="130">[<tspan fill="#38bdae">✔</tspan>] Establishing Link with Sonic Wave ABSS Energy Engine...</text>
+  </g>
+  <g class="term-text" style="animation-delay: 3.5s;">
+    <text x="25" y="150">[<tspan fill="#bf91f3">★</tspan>] <tspan class="success">Profile Loaded Successfully.</tspan></text>
+  </g>
+
+  <!-- Line 6-9: Core details -->
+  <g class="term-text" style="animation-delay: 4.2s;">
+    <text x="25" y="180">  ├─ <tspan class="info-label">FOUNDER &amp; CEO:</tspan> <tspan class="info-val">Hacktura R&amp;D (Cybersecurity &amp; Hardware Lab)</tspan></text>
+  </g>
+  <g class="term-text" style="animation-delay: 4.8s;">
+    <text x="25" y="200">  ├─ <tspan class="info-label">CURRENT MISSION:</tspan> <tspan class="info-val">Sonic Wave (Intelligent EV Dual-Battery ABSS)</tspan></text>
+  </g>
+  <g class="term-text" style="animation-delay: 5.4s;">
+    <text x="25" y="220">  └─ <tspan class="info-label">OPERATING STATUS:</tspan> <tspan class="info-val">Building Deep Tech &amp; Securing the Future [Active]</tspan></text>
+  </g>
+
+  <!-- Blinking Cursor -->
+  <rect x="525" y="209" width="8" height="13" class="cursor" style="animation-delay: 5.4s; opacity: 0; animation: lineFadeIn 0.1s forwards 5.4s, blink 0.9s infinite 5.5s;" />
+
+</svg>

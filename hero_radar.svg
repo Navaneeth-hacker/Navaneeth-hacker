@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 260" width="100%" height="260">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="100%" stop-color="#05070f" />
+    </radialGradient>
+    <linearGradient id="cyberGrid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#70a5fd" stop-opacity="0.05" />
+      <stop offset="50%" stop-color="#38bdae" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#bf91f3" stop-opacity="0.05" />
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdae" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#70a5fd" stop-opacity="0.2" />
+    </linearGradient>
+    
+    <!-- Glow Filters for Futuristic Look -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes gridPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+    @keyframes radarRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes sweepPulse {
+      0% { opacity: 0.1; }
+      50% { opacity: 0.4; }
+      100% { opacity: 0.1; }
+    }
+    @keyframes lineDraw {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes particleBlink {
+      0%, 100% { opacity: 0.2; r: 2px; }
+      50% { opacity: 0.9; r: 4px; }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(260px); }
+    }
+    @keyframes pulseText {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; fill: #ffffff; }
+    }
+    @keyframes waveScale {
+      0%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(1.4); }
+    }
+
+    /* Target and style classes */
+    .bg { fill: url(#bgGrad); }
+    .grid { fill: url(#cyberGrid); animation: gridPulse 6s infinite ease-in-out; }
+    .scan-line { stroke: #38bdae; stroke-width: 0.5; opacity: 0.15; animation: scanline 8s infinite linear; }
+    .radar-sweep { transform-origin: 130px 130px; animation: radarRotate 5s infinite linear; }
+    .radar-pulse { animation: sweepPulse 3s infinite ease-in-out; }
+    .node-pulse { animation: particleBlink 3s infinite ease-in-out; }
+    .pulse-text { animation: pulseText 2s infinite ease-in-out; font-family: 'Fira Code', 'Roboto Mono', monospace; }
+    .conn-path { stroke-dasharray: 200; animation: lineDraw 10s infinite linear; }
+    .wave-bar { transform-origin: bottom; animation: waveScale 2s infinite ease-in-out; }
+  </style>
+
+  <!-- Background -->
+  <rect width="850" height="260" class="bg" />
+  
+  <!-- Cyber Grid -->
+  <rect width="850" height="260" class="grid" />
+  <line x1="0" y1="0" x2="850" y2="0" class="scan-line" />
+
+  <!-- Grid Overlay lines -->
+  <g stroke="#70a5fd" stroke-width="0.3" opacity="0.2">
+    <line x1="260" y1="0" x2="260" y2="260" />
+    <line x1="590" y1="0" x2="590" y2="260" />
+  </g>
+
+  <!-- ==================== LEFT PANEL: RADAR SYSTEM ==================== -->
+  <g transform="translate(10, 0)">
+    <!-- Outer boundary of panel -->
+    <rect x="5" y="10" width="240" height="240" rx="8" fill="none" stroke="#70a5fd" stroke-width="1" opacity="0.3" />
+    <text x="15" y="28" fill="#70a5fd" font-size="10" font-family="'Fira Code', monospace" opacity="0.8">SYS.RADAR_DETECTION // OPERATIONAL</text>
+    
+    <!-- Radar rings -->
+    <circle cx="130" cy="130" r="80" fill="none" stroke="#38bdae" stroke-width="0.8" opacity="0.2" />
+    <circle cx="130" cy="130" r="60" fill="none" stroke="#38bdae" stroke-width="0.8" opacity="0.3" />
+    <circle cx="130" cy="130" r="40" fill="none" stroke="#38bdae" stroke-width="0.8" opacity="0.4" />
+    <circle cx="130" cy="130" r="20" fill="none" stroke="#38bdae" stroke-width="0.8" opacity="0.5" />
+    
+    <!-- Crosshairs -->
+    <line x1="50" y1="130" x2="210" y2="130" stroke="#38bdae" stroke-width="0.5" opacity="0.3" />
+    <line x1="130" y1="50" x2="130" y2="210" stroke="#38bdae" stroke-width="0.5" opacity="0.3" />
+    
+    <!-- Radar sweep arc -->
+    <path d="M130,130 L130,50 A80,80 0 0,1 210,130 Z" fill="url(#cyanGlow)" class="radar-sweep" />
+    
+    <!-- Radar targets -->
+    <circle cx="90" cy="90" r="3" fill="#bf91f3" class="node-pulse" style="animation-delay: 0.5s;" filter="url(#glowPurple)" />
+    <circle cx="170" cy="110" r="3" fill="#38bdae" class="node-pulse" style="animation-delay: 1.2s;" filter="url(#glowCyan)" />
+    <circle cx="150" cy="170" r="3" fill="#70a5fd" class="node-pulse" style="animation-delay: 2.1s;" />
+
+    <text x="15" y="240" fill="#38bdae" font-size="8" font-family="'Fira Code', monospace" opacity="0.7">TARGET_ACQ: 3 // HEURISTIC: ACTIVE</text>
+  </g>
+
+  <!-- ==================== MIDDLE PANEL: NEURAL NET & CORE ==================== -->
+  <g transform="translate(270, 0)">
+    <!-- Panel border -->
+    <rect x="5" y="10" width="305" height="240" rx="8" fill="none" stroke="#38bdae" stroke-width="1" opacity="0.3" />
+    <text x="15" y="28" fill="#38bdae" font-size="10" font-family="'Fira Code', monospace" opacity="0.8" class="pulse-text">CORE.NEURAL_NET_LINKS // SYNCED</text>
+    
+    <!-- Connection lines -->
+    <g stroke="#70a5fd" stroke-width="0.8" opacity="0.4" fill="none">
+      <path d="M 40,90 L 100,60 L 160,110 L 220,70 L 270,120" class="conn-path" />
+      <path d="M 40,170 L 100,140 L 160,110 L 220,180 L 270,120" class="conn-path" style="animation-delay: -3s;" />
+      <path d="M 100,60 L 100,140" class="conn-path" style="animation-delay: -5s;" />
+      <path d="M 220,70 L 220,180" class="conn-path" style="animation-delay: -7s;" />
+    </g>
+
+    <!-- Nodes -->
+    <g class="nodes">
+      <circle cx="40" cy="90" r="4" fill="#38bdae" class="node-pulse" filter="url(#glowCyan)" style="animation-delay: 0.1s;" />
+      <circle cx="40" cy="170" r="4" fill="#bf91f3" class="node-pulse" filter="url(#glowPurple)" style="animation-delay: 0.4s;" />
+      
+      <circle cx="100" cy="60" r="5" fill="#70a5fd" class="node-pulse" style="animation-delay: 0.7s;" />
+      <circle cx="100" cy="140" r="5" fill="#38bdae" class="node-pulse" filter="url(#glowCyan)" style="animation-delay: 1s;" />
+      
+      <circle cx="160" cy="110" r="6" fill="#bf91f3" class="node-pulse" filter="url(#glowPurple)" style="animation-delay: 1.3s;" />
+      
+      <circle cx="220" cy="70" r="5" fill="#38bdae" class="node-pulse" filter="url(#glowCyan)" style="animation-delay: 1.6s;" />
+      <circle cx="220" cy="180" r="5" fill="#70a5fd" class="node-pulse" style="animation-delay: 1.9s;" />
+      
+      <circle cx="270" cy="120" r="6" fill="#38bdae" class="node-pulse" filter="url(#glowCyan)" style="animation-delay: 2.2s;" />
+    </g>
+
+    <!-- Labels for nodes -->
+    <text x="35" y="78" fill="#ffffff" font-size="7" font-family="'Fira Code', monospace" opacity="0.6">SEC_RES</text>
+    <text x="35" y="190" fill="#ffffff" font-size="7" font-family="'Fira Code', monospace" opacity="0.6">HW_DEV</text>
+    <text x="145" y="98" fill="#bf91f3" font-size="8" font-family="'Fira Code', monospace" opacity="0.9" font-weight="bold">HACKTURA</text>
+    <text x="250" y="138" fill="#38bdae" font-size="8" font-family="'Fira Code', monospace" opacity="0.9" font-weight="bold">SONIC_WAVE</text>
+
+    <!-- Matrix rain particle elements -->
+    <g fill="#38bdae" opacity="0.7">
+      <rect x="70" y="40" width="1" height="8" class="node-pulse" style="animation-duration: 1.5s;" />
+      <rect x="190" y="140" width="1" height="12" class="node-pulse" style="animation-duration: 2.2s;" />
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT PANEL: TELEMETRY & WAFFLES ==================== -->
+  <g transform="translate(590, 0)">
+    <!-- Outer boundary of panel -->
+    <rect x="5" y="10" width="240" height="240" rx="8" fill="none" stroke="#bf91f3" stroke-width="1" opacity="0.3" />
+    <text x="15" y="28" fill="#bf91f3" font-size="10" font-family="'Fira Code', monospace" opacity="0.8">ENG.TELEMETRY_LOGS // DYNAMIC</text>
+    
+    <!-- Audio Waveform representation / System Load -->
+    <g transform="translate(20, 70)" fill="#70a5fd" opacity="0.7">
+      <rect x="0" y="0" width="4" height="25" class="wave-bar" style="animation-delay: 0.1s;" />
+      <rect x="8" y="0" width="4" height="35" class="wave-bar" style="animation-delay: 0.3s;" />
+      <rect x="16" y="0" width="4" height="15" class="wave-bar" style="animation-delay: 0.5s;" />
+      <rect x="24" y="0" width="4" height="42" class="wave-bar" style="animation-delay: 0.2s;" />
+      <rect x="32" y="0" width="4" height="28" class="wave-bar" style="animation-delay: 0.7s;" />
+      <rect x="40" y="0" width="4" height="50" class="wave-bar" fill="#38bdae" filter="url(#glowCyan)" style="animation-delay: 0.4s;" />
+      <rect x="48" y="0" width="4" height="30" class="wave-bar" style="animation-delay: 0.6s;" />
+      <rect x="56" y="0" width="4" height="20" class="wave-bar" style="animation-delay: 0.8s;" />
+      <rect x="64" y="0" width="4" height="38" class="wave-bar" style="animation-delay: 0.2s;" />
+      <rect x="72" y="0" width="4" height="12" class="wave-bar" style="animation-delay: 0.9s;" />
+      <rect x="80" y="0" width="4" height="45" class="wave-bar" fill="#bf91f3" style="animation-delay: 0.5s;" />
+    </g>
+
+    <!-- Telemetry status lines -->
+    <g font-size="8" font-family="'Fira Code', monospace" fill="#ffffff" opacity="0.7" transform="translate(15, 145)">
+      <text x="0" y="0">> VOLTAGE: <tspan fill="#38bdae">78.4V [STABLE]</tspan></text>
+      <text x="0" y="15">> CURRENT: <tspan fill="#38bdae">12.8A [FLOWING]</tspan></text>
+      <text x="0" y="30">> SOC_PRED: <tspan fill="#bf91f3">94.2%</tspan></text>
+      <text x="0" y="45">> ANOMALIES: <tspan fill="#ff5555">0 [NONE]</tspan></text>
+      <text x="0" y="60">> SYS_TEMP: <tspan fill="#70a5fd">28.5C</tspan></text>
+      <text x="0" y="75">> ABSS_STATE: <tspan fill="#38bdae">AUTO_SEL</tspan></text>
+    </g>
+  </g>
+</svg>
