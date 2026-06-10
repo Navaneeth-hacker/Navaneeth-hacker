@@ -1,13 +1,13 @@
 <!-- HERO SECTION (SpaceX/Tesla Control Grid & Radar Animation) -->
 <div align="center">
-  <img src="./images/hero_radar.svg" width="100%" alt="Navaneeth Chandran Hero Control Grid" />
+  <img src="./hero_radar.svg" width="100%" alt="Navaneeth Chandran Hero Control Grid" />
 </div>
 
 <br />
 
 <!-- TERMINAL BOOTSTRAP SYSTEM -->
 <div align="center">
-  <img src="./images/terminal.svg" width="100%" alt="System Console Loading Sequence" />
+  <img src="./terminal.svg" width="100%" alt="System Console Loading Sequence" />
 </div>
 
 ---
@@ -75,7 +75,7 @@ class NavaneethChandran:
 **Sonic Wave** is an advanced, automated energy routing and battery management system designed for light EVs. By leveraging an **Automated Battery Selection System (ABSS)** controlled via an ESP32 microcontroller, it intelligently monitors, switches, and optimizes power delivery between dual battery packs in real-time.
 
 <div align="center">
-  <img src="./images/sonic_wave_arch.svg" width="100%" alt="Sonic Wave ABSS Architecture Diagram" />
+  <img src="./sonic_wave_arch.svg" width="100%" alt="Sonic Wave ABSS Architecture Diagram" />
 </div>
 
 ### Core Technologies & Innovations
@@ -93,7 +93,7 @@ class NavaneethChandran:
 Navaneeth is the founder of **Hacktura R&D**, an independent cybersecurity research and hardware innovation lab based in Kerala. Through Hacktura, he designs physical pen-testing equipment, audits firmware ecosystems, and delivers cybersecurity education to prepare the next generation of engineers for emerging digital threats.
 
 <div align="center">
-  <img src="./images/hacktura_ecosystem.svg" width="100%" alt="Hacktura R&D Innovation Map" />
+  <img src="./hacktura_ecosystem.svg" width="100%" alt="Hacktura R&D Innovation Map" />
 </div>
 
 ### Parallel Research & Portfolios
